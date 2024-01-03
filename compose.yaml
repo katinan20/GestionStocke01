@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=stock_db'
+      - 'POSTGRES_PASSWORD=3214'
+      - 'POSTGRES_USER=user2'
+    ports:
+      - '5432'
+  pgadmin:
+    image: 'dpage/pgadmin4:latest'
+    environment:
+      PGADMIN_DEFAULT_EMAIL: katine.toure95@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: 3214
+      PGADMIN_LISTEN_PORT: 5052  # Correction ici
+    ports:
+      - '5052:5052'
+
